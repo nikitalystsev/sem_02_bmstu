@@ -1,0 +1,6 @@
+0000000000000000 T count_resistance
+                 U __isoc99_scanf
+000000000000006a T main
+                 U printf
+                 U puts
+                 U __stack_chk_fail

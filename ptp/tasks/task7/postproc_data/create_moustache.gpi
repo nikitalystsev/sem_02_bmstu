@@ -1,0 +1,17 @@
+#!/usr/bin/gnuplot -persist
+reset
+NO_ANIMATION = 1
+
+set terminal svg size 1920, 1080
+set output 'moustache.svg'
+set size ratio 0.61803
+set size ratio 0.5625
+
+set xlabel "Number of elements, pcs"
+set ylabel "Time, ms"
+set grid 
+set title "A graph with a mustache for the through square brackets processing option at the O3 optimization level"
+
+plot "./grap3/data_O3.txt" using 1:3:2:6:5 with candlesticks whiskerbars, \
+"./grap3/data_O3.txt" using 1:4:4:4:4 with candlesticks lt -1, \
+"./grap3/data_O3.txt" using 1:7 with linespoints pt 8, \

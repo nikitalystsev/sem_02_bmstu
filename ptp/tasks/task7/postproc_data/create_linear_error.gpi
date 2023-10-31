@@ -1,0 +1,20 @@
+#!/usr/bin/gnuplot -persist
+reset
+NO_ANIMATION = 1
+
+set terminal svg size 1920, 1080
+set output 'linear_error_graph.svg'
+set size ratio 0.61803
+set size ratio 0.5625
+
+set xlabel "Number of elements, pcs"
+set ylabel "Time, ms"
+set grid 
+set title "Piecewise linear graph with error for all array processing options at the O2 optimization level"
+
+plot "./grap2/data_O2.txt" using 1:2:3:4 with errorbars, \
+"./grap2/data_O2.txt" with lines, \
+"./grap2/data2_O2.txt" using 1:2:3:4 with errorbars, \
+"./grap2/data2_O2.txt" with lines, \
+"./grap2/data3_O2.txt" using 1:2:3:4 with errorbars, \
+"./grap2/data3_O2.txt" with lines, \

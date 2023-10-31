@@ -1,0 +1,24 @@
+#!/usr/bin/gnuplot -persist
+reset
+NO_ANIMATION = 1
+
+set terminal svg size 1920, 1080
+set output 'linear_graph.svg'
+set size ratio 0.61803
+set size ratio 0.5625
+
+set xlabel "Number of row, pcs"
+set ylabel "Time, ms"
+set grid 
+set title "graphs of the dependence of the program execution time on the size of the matrix rows"
+
+plot "./grap1/data_O0.txt" with linespoints pt 5 lt rgb "red", \
+"./grap1/data_Os.txt" with linespoints, \
+"./grap1/data_O1.txt" with linespoints, \
+"./grap1/data_O2.txt" with linespoints, \
+"./grap1/data_O3.txt" with linespoints, \
+"./grap1/data2_O0.txt" with linespoints, \
+"./grap1/data2_Os.txt" with linespoints, \
+"./grap1/data2_O1.txt" with linespoints, \
+"./grap1/data2_O2.txt" with linespoints, \
+"./grap1/data2_O3.txt" with linespoints
